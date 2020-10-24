@@ -48,12 +48,22 @@ const isSquare = a => {
   return Number.isInteger(Math.sqrt(a));
 };
 
+const isSquareSol = a => Boolean(Math.sqrt(a) % 1 === 0);
+
 const startsWith = (char, string) => {
   return char === string[0];
 };
 
+const startsWithSol = (char, string) => string.charAt(0) === char;
+
 const containsVowels = string => {
   return /a|e|i|o|u/gi.test(string)
+};
+
+const containsVowelsSol = string => {
+  return string
+    .split("")
+    .some(letter => ["a", "e", "i", "o", "u"].includes(letter.toLowerCase()));
 };
 
 const isLowerCase = string => {
