@@ -26,6 +26,11 @@ const averageAge = people => {
   return ages.reduce((total, age) => total + age) / ages.length;
 };
 
+const averageAge2 = people => {
+  return people.reduce((total, obj) => total + obj.age, 0) / people.length;
+}  // in this case we need to give reduce the initial value 
+//- this is necessary when getting at a number inan object or sub-array
+
 const createTalkingPerson = (name, age) => {
   return {
           name: name,
