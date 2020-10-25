@@ -1,10 +1,7 @@
-// const getNthElement = (index, array) => {
-//   let i =  index >= array.length ? index - array.length : index;
-//   return array[i];
-// };
-
 const getNthElement = (index, array) => {
- while (index > 3) { index -= 4}
+ while (index >= array.length) { 
+   index -= 4 
+  }
  return array[index]
 };
 
