@@ -1,6 +1,8 @@
 const getNthElement = (index, array) => {
-  let i =  index >= array.length ? index - array.length : index;
-  return array[i];
+ while (index >= array.length) { 
+   index -= 4 
+  }
+ return array[index]
 };
 
 const arrayToCSVString = array => array.join(',');
